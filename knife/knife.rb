@@ -43,7 +43,7 @@ cache_options           :path => "/tmp/chef-checksums-#{username}"
 # Configure client bootstrapping
 #
 bootstrap_runs_chef_client true
-bootstrap_chef_version  "~> 0.10.4"
+bootstrap_chef_version  "~> 0.10.8"
 
 def load_if_exists(file) ; load(file) if File.exists?(file) ; end
 
@@ -59,3 +59,4 @@ load_if_exists "#{credentials_path}/knife-org.rb"
 
 # User-specific knife info or credentials
 load_if_exists "#{credentials_path}/knife-user-#{username}.rb"
+

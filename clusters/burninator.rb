@@ -8,12 +8,12 @@
 Ironfan.cluster 'burninator' do
   cloud(:ec2) do
     defaults
-    availability_zones ['us-east-1d']
+    availability_zones ['eu-west-1a']
     # use a c1.xlarge so the AMI knows about all ephemeral drives
     flavor              'c1.xlarge'
     backing             'ebs'
     # image_name is per-facet here
-    bootstrap_distro    'ubuntu10.04-ironfan'
+    bootstrap_distro    'ubuntu11.10-ironfan'
     chef_client_script  'client.rb'
     mount_ephemerals
   end
@@ -35,36 +35,26 @@ Ironfan.cluster 'burninator' do
   facet :trogdor do
     instances           1
 
-    cloud.image_name    'natty'  # Leave set at vanilla natty
+    cloud.image_name    'oneiric'  # Leave set at vanilla natty
 
     recipe              'cloud_utils::burn_ami_prep'
 
     role                :package_set, :last
 
-    recipe              'ant'
-    recipe              'boost'
+    recipe              'apt'
     recipe              'build-essential'
-    recipe              'emacs'
     recipe              'git'
-    recipe              'java::sun'
-    recipe              'jpackage'
-    recipe              'jruby'
-    recipe              'jruby::gems'
-    recipe              'nodejs'
     recipe              'ntp'
     recipe              'openssl'
-    recipe              'pig::install_from_release'
-    recipe              'hadoop_cluster::add_cloudera_repo'
     recipe              'runit'
-    recipe              'thrift'
     recipe              'xfs'
+    recipe              'vim'
+    recipe              'ubuntu'
     recipe              'xml'
     recipe              'zlib'
-    recipe              'zsh'
 
     facet_role.override_attributes({
-        :package_set => { :install => %w[ base dev sysadmin text python emacs ] },
-        :apt    => { :cloudera => { :force_distro => 'maverick',  }, },
+        :package_set => { :install => %w[ base dev sysadmin text ] },
       })
   end
 
@@ -75,7 +65,7 @@ Ironfan.cluster 'burninator' do
     instances     1
     # Once the AMI is burned, add a new entry in your knife configuration -- see
     # knife/example-credentials/knife-org.rb. Fill in its name here:
-    cloud.image_name    'ironfan-natty'
+    cloud.image_name    'thinlayer-ironfan-oneiric'
   end
 
 end

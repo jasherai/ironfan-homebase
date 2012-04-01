@@ -1,0 +1,185 @@
+GIT
+  remote: git@github.com:infochimps/guard-chef.git
+  revision: 53f7fba49523bf3b45cd4cac6a18c03ef2c4f210
+  specs:
+    guard-chef (0.0.2)
+      guard (>= 0.2.2)
+
+GIT
+  remote: https://github.com/opscode/chef.git
+  revision: 6abfe6a5880a3c657526c9e2727f3fd13c6a9d7f
+  specs:
+    chef (0.10.9)
+      bunny (>= 0.6.0)
+      erubis
+      highline
+      json (>= 1.4.4, <= 1.6.1)
+      mixlib-authentication (>= 1.1.0)
+      mixlib-cli (>= 1.1.0)
+      mixlib-config (>= 1.1.2)
+      mixlib-log (>= 1.3.0)
+      mixlib-shellout (~> 1.0.0.rc)
+      moneta
+      net-ssh (~> 2.2.2)
+      net-ssh-multi (~> 1.1.0)
+      ohai (>= 0.6.0)
+      rest-client (>= 1.0.4, < 1.7.0)
+      treetop (~> 1.4.9)
+      uuidtools
+
+PATH
+  remote: /home/pmehta/workspace/git-sync.d/ironfan
+  specs:
+    ironfan (3.1.5)
+      chef (~> 0.10.4)
+      fog (~> 1.2.0)
+      formatador (~> 0.2.1)
+      gorillib (~> 0.1.7)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    archive-tar-minitar (0.5.2)
+    builder (3.0.0)
+    bunny (0.7.9)
+    childprocess (0.3.1)
+      ffi (~> 1.0.6)
+    coderay (1.0.5)
+    cucumber (1.1.9)
+      builder (>= 2.1.2)
+      diff-lcs (>= 1.1.2)
+      gherkin (~> 2.9.0)
+      json (>= 1.4.6)
+      term-ansicolor (>= 1.0.6)
+    diff-lcs (1.1.3)
+    erubis (2.7.0)
+    excon (0.12.0)
+    ffi (1.0.11)
+    fog (1.2.0)
+      builder
+      excon (~> 0.12.0)
+      formatador (~> 0.2.0)
+      mime-types
+      multi_json (~> 1.0)
+      net-scp (~> 1.0.4)
+      net-ssh (>= 2.1.3)
+      nokogiri (~> 1.5.0)
+      ruby-hmac
+    formatador (0.2.1)
+    gherkin (2.9.3)
+      json (>= 1.4.6)
+    git (1.2.5)
+    gorillib (0.1.9)
+      json
+    grit (2.4.1)
+      diff-lcs (~> 1.1)
+      mime-types (~> 1.15)
+    guard (1.0.1)
+      ffi (>= 0.5.0)
+      thor (~> 0.14.6)
+    guard-cucumber (0.7.5)
+      cucumber (>= 0.10)
+      guard (>= 0.8.3)
+    guard-process (1.0.3)
+      ffi (~> 1.0.9)
+      guard (>= 0.4.2)
+      spoon (~> 0.0.1)
+    highline (1.6.11)
+    i18n (0.6.0)
+    ipaddress (0.8.0)
+    jeweler (1.8.3)
+      bundler (~> 1.0)
+      git (>= 1.2.5)
+      rake
+      rdoc
+    json (1.5.4)
+    log4r (1.1.10)
+    method_source (0.7.1)
+    mime-types (1.18)
+    mixlib-authentication (1.1.4)
+      mixlib-log
+    mixlib-cli (1.2.2)
+    mixlib-config (1.1.2)
+    mixlib-log (1.3.0)
+    mixlib-shellout (1.0.0)
+    moneta (0.6.0)
+    multi_json (1.2.0)
+    net-scp (1.0.4)
+      net-ssh (>= 1.99.1)
+    net-ssh (2.2.2)
+    net-ssh-gateway (1.1.0)
+      net-ssh (>= 1.99.1)
+    net-ssh-multi (1.1)
+      net-ssh (>= 2.1.4)
+      net-ssh-gateway (>= 0.99.0)
+    nokogiri (1.5.2)
+    ohai (0.6.12)
+      ipaddress
+      mixlib-cli
+      mixlib-config
+      mixlib-log
+      systemu
+      yajl-ruby
+    polyglot (0.3.3)
+    pry (0.9.8.4)
+      coderay (~> 1.0.5)
+      method_source (~> 0.7.1)
+      slop (>= 2.4.4, < 3)
+    rake (0.9.2.2)
+    rdoc (3.12)
+      json (~> 1.4)
+    redcarpet (2.1.1)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
+    rspec (2.9.0)
+      rspec-core (~> 2.9.0)
+      rspec-expectations (~> 2.9.0)
+      rspec-mocks (~> 2.9.0)
+    rspec-core (2.9.0)
+    rspec-expectations (2.9.0)
+      diff-lcs (~> 1.1.3)
+    rspec-mocks (2.9.0)
+    ruby-hmac (0.4.0)
+    ruby_gntp (0.3.4)
+    slop (2.4.4)
+    spoon (0.0.1)
+    systemu (2.5.0)
+    term-ansicolor (1.0.7)
+    thor (0.14.6)
+    treetop (1.4.10)
+      polyglot
+      polyglot (>= 0.3.1)
+    uuidtools (2.1.2)
+    vagrant (1.0.2)
+      archive-tar-minitar (= 0.5.2)
+      childprocess (~> 0.3.1)
+      erubis (~> 2.7.0)
+      i18n (~> 0.6.0)
+      json (~> 1.5.1)
+      log4r (~> 1.1.9)
+      net-scp (~> 1.0.4)
+      net-ssh (~> 2.2.2)
+    yajl-ruby (1.1.0)
+    yard (0.7.5)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (~> 1)
+  chef!
+  cucumber (~> 1.1)
+  grit
+  guard (~> 1)
+  guard-chef!
+  guard-cucumber
+  guard-process (~> 1)
+  ironfan!
+  jeweler
+  pry
+  rake
+  redcarpet (~> 2)
+  rspec (~> 2.5)
+  ruby_gntp
+  vagrant (~> 1.0.2)
+  yard (~> 0.6)

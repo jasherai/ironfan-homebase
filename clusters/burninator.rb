@@ -13,12 +13,12 @@ Ironfan.cluster 'burninator' do
     flavor              'c1.xlarge'
     backing             'ebs'
     # image_name is per-facet here
-    bootstrap_distro    'ubuntu11.10-ironfan'
+    bootstrap_distro    'ubuntu12.04-ironfan'
     chef_client_script  'client.rb'
     mount_ephemerals
   end
 
-  environment           :dev
+  environment           :development
 
   role                  :chef_client
   role                  :ssh
@@ -35,15 +35,19 @@ Ironfan.cluster 'burninator' do
   facet :trogdor do
     instances           1
 
-    cloud.image_name    'oneiric'  # Leave set at vanilla natty
+    cloud.image_name    'precise'  # Leave set at vanilla natty
 
     recipe              'cloud_utils::burn_ami_prep'
 
+    #role                :org_base
+    #role                :org_users
+    #role                :org_final, :last
     role                :package_set, :last
 
     recipe              'apt'
     recipe              'build-essential'
     recipe              'git'
+    recipe              'nodejs'
     recipe              'ntp'
     recipe              'openssl'
     recipe              'runit'
@@ -65,7 +69,7 @@ Ironfan.cluster 'burninator' do
     instances     1
     # Once the AMI is burned, add a new entry in your knife configuration -- see
     # knife/example-credentials/knife-org.rb. Fill in its name here:
-    cloud.image_name    'thinlayer-ironfan-oneiric'
+    cloud.image_name    'ironfan-precise'
   end
 
 end

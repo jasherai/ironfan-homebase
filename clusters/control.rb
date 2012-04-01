@@ -5,16 +5,18 @@ Ironfan.cluster 'control' do
 
   cloud(:ec2) do
     defaults
+    permanent           true
     availability_zones ['eu-west-1a']
     flavor              't1.micro'
     backing             'ebs'
-    image_name          'thinlayer-ironfan-oneiric'
-    bootstrap_distro    'ubuntu11.10-ironfan'
+    image_name          'ironfan-precise'
+    #image_name          'basebox-1110'
+    bootstrap_distro    'ubuntu12.04-ironfan'
     chef_client_script  'client.rb'
     mount_ephemerals
   end
 
-  environment           :dev
+  environment           :development
 
   role                  :systemwide
   role                  :chef_client
@@ -38,6 +40,18 @@ Ironfan.cluster 'control' do
         })
     end
 
+    volume(:image_data_vol) do
+      defaults
+      size                26
+      keep                true
+      device              '/dev/sdn' # note: will appear as /dev/xvdh on modern ubuntus
+      mount_point         '/image_data'
+      attachable          :ebs
+      snapshot_name       :blank_2_xfs
+     resizable           true
+      create_at_launch    true
+      tags( :persistent => true, :local => false, :bulk => false, :fallback => false )
+    end
     volume(:home_vol) do
       defaults
       size                2
@@ -45,7 +59,7 @@ Ironfan.cluster 'control' do
       device              '/dev/sdh' # note: will appear as /dev/xvdh on modern ubuntus
       mount_point         '/home'
       attachable          :ebs
-      snapshot_name       :blank_2_xfs
+      snapshot_name       :blank_home_drive
       resizable           true
       create_at_launch    true
       tags( :persistent => true, :local => false, :bulk => false, :fallback => false )

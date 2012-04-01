@@ -1,1 +1,1 @@
-../vendor/ironfan-pantry/roles/org_base.rb
+../vendor/org-pantry/roles/org_base.rb

@@ -1,24 +1,12 @@
 [submodule "vendor/ironfan-pantry"]
 	path = vendor/ironfan-pantry
-	url = https://github.com/infochimps-labs/ironfan-pantry
+	url = https://github.com/jasherai/ironfan-pantry
 [submodule "vendor/opscode/cookbooks"]
 	path = vendor/opscode/cookbooks
-	url = https://github.com/infochimps-labs/opscode_cookbooks
+	url = https://github.com/jasherai/cookbooks
 [submodule "notes"]
 	path = notes
 	url = https://github.com/infochimps-labs/ironfan.wiki.git
-[submodule "vendor/org-pantry/cookbooks/rvm"]
-	path = vendor/org-pantry/cookbooks/rvm
-	url = git://github.com/fnichol/chef-rvm.git
-[submodule "vendor/org-pantry/application"]
-	path = vendor/org-pantry/application
-	url = https://github.com/opscode-cookbooks/application.git
-[submodule "vendor/org-pantry/cookbooks/application"]
-	path = vendor/org-pantry/cookbooks/application
-	url = https://github.com/opscode-cookbooks/application.git
-[submodule "vendor/org-pantry/cookbooks/python"]
-	path = vendor/org-pantry/cookbooks/python
-	url = https://github.com/opscode-cookbooks/python.git
 [submodule "knife/credentials"]
 	path = knife/credentials
 	url = git.thinlayer.co.uk:mr_ironfan_credentials.git

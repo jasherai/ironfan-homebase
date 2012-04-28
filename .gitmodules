@@ -10,3 +10,6 @@
 [submodule "knife/credentials"]
 	path = knife/credentials
 	url = git.thinlayer.co.uk:mr_ironfan_credentials.git
+[submodule "vendor/org-pantry"]
+	path = vendor/org-pantry
+	url = git.thinlayer.co.uk:org-pantry.git

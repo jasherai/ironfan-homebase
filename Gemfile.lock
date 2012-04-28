@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:infochimps/guard-chef.git
+  remote: git@github.com:infochimps-forks/guard-chef.git
   revision: 53f7fba49523bf3b45cd4cac6a18c03ef2c4f210
   specs:
     guard-chef (0.0.2)
